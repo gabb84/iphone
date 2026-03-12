@@ -1,12 +1,16 @@
 --
 -- Database: `phpbook-1`
 -- This is the first database used in the PHP & MySQL book
+--
 
----
+-- --------------------------------------------------------
+
+CREATE DATABASE IF NOT EXISTS `phpbook-1`;
+USE `phpbook-1`;
 
 --
 -- Table structure for table `article`
---------------------------------------
+-- --------------------------------------------------------
 
 CREATE TABLE `article` (
 `id` int(11) NOT NULL,
@@ -22,7 +26,7 @@ CREATE TABLE `article` (
 
 --
 -- Dumping data for table `article`
------------------------------------
+-- --------------------------------------------------------
 
 INSERT INTO `article` (`id`, `title`, `summary`, `content`, `created`, `category_id`, `member_id`, `image_id`, `published`) VALUES
 (1,'iPhone 15 Pro Review','Complete review of Apple''s flagship iPhone','The iPhone 15 Pro introduces a titanium body that makes the device lighter and stronger. Powered by the A17 Pro chip, it delivers incredible performance and improved camera capabilities for professional photography.','2024-01-01 12:21:03',1,2,1,1),
@@ -52,7 +56,7 @@ INSERT INTO `article` (`id`, `title`, `summary`, `content`, `created`, `category
 
 --
 -- Table structure for table `category`
----------------------------------------
+-- --------------------------------------------------------
 
 CREATE TABLE `category` (
 `id` int(11) NOT NULL,
@@ -63,7 +67,7 @@ CREATE TABLE `category` (
 
 --
 -- Dumping data for table `category`
-------------------------------------
+-- --------------------------------------------------------
 
 INSERT INTO `category` (`id`, `name`, `description`, `navigation`) VALUES
 (1,'iPhone Models','Latest Apple iPhones',1),
@@ -73,7 +77,7 @@ INSERT INTO `category` (`id`, `name`, `description`, `navigation`) VALUES
 
 --
 -- Table structure for table `image`
-------------------------------------
+-- --------------------------------------------------------
 
 CREATE TABLE `image` (
 `id` int(11) NOT NULL,
@@ -83,7 +87,7 @@ CREATE TABLE `image` (
 
 --
 -- Dumping data for table `image`
----------------------------------
+-- --------------------------------------------------------
 
 INSERT INTO `image` (`id`, `file`, `alt`) VALUES
 (1,'iphone15pro.jpg','Apple iPhone 15 Pro'),
@@ -112,7 +116,7 @@ INSERT INTO `image` (`id`, `file`, `alt`) VALUES
 
 --
 -- Table structure for table `member`
--------------------------------------
+-- --------------------------------------------------------
 
 CREATE TABLE `member` (
 `id` int(11) NOT NULL,
@@ -126,9 +130,9 @@ CREATE TABLE `member` (
 
 --
 -- Dumping data for table `member`
-----------------------------------
+-- --------------------------------------------------------
 
 INSERT INTO `member` (`id`, `forename`, `surname`, `email`, `password`, `joined`, `picture`) VALUES
-(1,'Alex','Morgan','[alex@iphonehub.com](mailto:alex@iphonehub.com)','iphn-23jd-82js-992k','2024-01-01 09:00:00','alex.jpg'),
-(2,'Sophia','Reyes','[sophia@iphonehub.com](mailto:sophia@iphonehub.com)','iph9-2kdd-3mns-88ka','2024-01-02 10:30:00',NULL),
-(3,'Daniel','Park','[daniel@iphonehub.com](mailto:daniel@iphonehub.com)','iphone-88ks-2jsd-33sa','2024-01-03 14:15:00','daniel.jpg');
+(1,'Alex','Morgan','alex@iphonehub.com','iphn-23jd-82js-992k','2024-01-01 09:00:00','alex.jpg'),
+(2,'Sophia','Reyes','sophia@iphonehub.com','iph9-2kdd-3mns-88ka','2024-01-02 10:30:00',NULL),
+(3,'Daniel','Park','daniel@iphonehub.com','iphone-88ks-2jsd-33sa','2024-01-03 14:15:00','daniel.jpg');
